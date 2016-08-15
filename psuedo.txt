@@ -1,0 +1,5 @@
+- var gameWords = some words
+- var word equals random index from gameWords
+- 
+  
+
