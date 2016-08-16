@@ -1,5 +1,21 @@
-- var gameWords = some words
-- var word equals random index from gameWords
-- 
-  
+- var gameWords assigned to chicken, cow, pig
+- var word asigned to random index from gameWords //var item = items[Math.floor(Math.random()*items.length)];
+- var guesses assigned to 10
 
+-if guesses is less than 1 then
+--alert "You lose"
+---- refresh page
+
+- 
+onKeyUp event equals function1
+-- var key assinged to  convert key to lowercase
+-- call verifyKey(key)
+
+function verifyKey(x)
+-- for i assigned to index.word, i < word.length, increment
+----if x equals charAt.word then 
+------ print word to div. 
+	 
+---- else
+------ print key to usedLetters div.
+------ decrease guesses by 1
