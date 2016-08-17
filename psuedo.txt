@@ -1,4 +1,4 @@
-- var gameWords assigned to chicken, cow, pig
+- var gameWords (object) assigned to chicken, cow, pig
 
 - var word asigned to random index from gameWords //var item = items[Math.floor(Math.random()*items.length)];
 
@@ -6,7 +6,7 @@
 
 
 
--if guesses is less than 1 then
+-if guesses is equal to 1 then
 
 --alert "You lose"
 
@@ -34,3 +34,15 @@ function verifyKey(x)
 ------ print key to usedLetters div.
 
 ------ decrease guesses by 1
+
+
+--------------------------------------------------------------------------
+var letters = ['h', 'e', 'l', 'l', 'o'];
+var blanks = ['_', '_', '_', '_', '_'];
+
+// when the user guesses a letter, loop through the 'letters' array
+for (var i = 0; i < letters.length; i++) {
+    if (letters[i] === letterGuessed) {
+        blanks[i] = letterGuessed;
+    }
+}
