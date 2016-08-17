@@ -18,32 +18,23 @@ function checkGuesses(){
 	}
 }
 
-function checkWords(){
-	for(var i = 0; i < word.length; i++){
-		if (key === word.charAt(i)){
-			blanks[i] = key;
-			var check = true;
-		}
-
-		else{
-			var check = false;
-		}
-	}
-}
-
 document.onkeyup=function(){
+	checkGuesses();
 	var x = event.key;
 	var key = x.toLowerCase();
 	console.log(key);
-	checkGuesses();
-	console.log(guesses);
-	checkWords();
+	
+	for(var i = 0; i < word.length; i++){
+		if (key === word.charAt(i)){
+			blanks[i] = key;
+		}
 
-	if (check === false){
-		guesses--;
-	}
-
-	else{
-			console.log("Good guess!");
+		else{
+			guesses--;
+			console.log(guesses);
+		}
 	}
 }
+
+
+
