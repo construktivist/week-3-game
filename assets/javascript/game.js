@@ -1,27 +1,35 @@
-var gameWords = ["pig", "chicken", "cow"]; //Array for possible words to play.
-var word = gameWords[Math.floor(Math.random()*gameWords.length)]; // Selects random word from array and makes is a variable.
-var wordArray = [];
-var blanks = []; // Holds blanks.
-var guessedLetters = [];
-var guesses = 15; //# of guesses.
+initialize();
+
 var wins = 0;
+var guessedLetters = [];
+var guesses = 15;
+var gameWords = ["pig", "chicken", "cow","dog", "cat", "spider"];
+var word = gameWords[Math.floor(Math.random()*gameWords.length)]; // Selects random word from array and makes is a variable.
+var blanks = [];
+var wordArray = [];
 
-//This finds the length of the randomly selected words and pushes blanks to the "blanks" array.
-for (var i = 0; i < word.length; i++){
-	blanks.push("_");
+function initialize(){
+	var gameWords = ["pig", "chicken", "cow","dog", "cat", "spider"];
+	var word = gameWords[Math.floor(Math.random()*gameWords.length)]; // Selects random word from array and makes is a variable.
+	var wordArray = [];
+	var blanks = []; // Holds blanks.
+	var guessedLetters = [];
+	var guesses = 15;
+	for (var i = 0; i < word.length; i++){
+		blanks.push("_");
+	}
+
+	for (var i = 0; i < word.length; i++){
+		wordArray.push(word.charAt(i));
+	}
 }
 
-
-for (var i = 0; i < word.length; i++){
-	wordArray.push(word.charAt(i));
-}
-
-//For debugging.
-console.log(gameWords);
-console.log(blanks);
-console.log(word);
-console.log(wordArray);
-console.log(guesses);
+// For debugging.
+// console.log(gameWords);
+// console.log(blanks);
+// console.log(word);
+// console.log(wordArray);
+// console.log(guesses);
 
 
 //Function that startes the game on key select
@@ -65,16 +73,19 @@ document.onkeyup=function(){
 		alert("You won!");
 		wins++;
 		console.log(wins);
+		initialize();
 	}
+	document.getElementById("current-word").innerHTML = blanks;
+	document.getElementById("guess-number").innerHTML = guesses;
+	document.getElementById("guessed-letters").innerHTML = guessedLetters;
 }
 
 function checkGuesses(){
 	if (guesses < 1){
-		alert("You lose. Try again!");	
+		alert("You lose. Try again!");
+		initialize();	
 	}
 }
-
-
 
 
 

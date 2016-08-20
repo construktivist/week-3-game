@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<title>Hangman!</title>
+		<script type="text/javascript" src="assets/javascript/game.js">
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
-
+	<div>
+		<h1>Hangman (Minimalist version :P)</h1>
+	</div>
+	<div>
+		<h2>Current Word</h2>
+		<h3 id="current-word"></h3>
+	</div>
+	<div>
+		<h2>Number of guesses remaining:</h2>
+		<h3 id="guess-number"></h3>
+	</div>
+	<div >
+		<h2>Letters already guessed:</h2>
+		<h3 id="guessed-letters"></h3>
+	</div>
 </body>
 </html>
