@@ -46,3 +46,10 @@ for (var i = 0; i < letters.length; i++) {
         blanks[i] = letterGuessed;
     }
 }
+
+
+
+
+loop through word and push each character to wordArray
+
+if wordArray and Blanks are equal then alert "You win!" and reload page.
