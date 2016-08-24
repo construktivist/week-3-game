@@ -1,6 +1,6 @@
 var wins = 0;
-initialize();
 
+initialize();
 function initialize(){
 	var gameWords = ["pig", "chicken", "cow"];
 	var word = gameWords[Math.floor(Math.random()*gameWords.length)];
@@ -16,8 +16,8 @@ function initialize(){
 		 for (var i = 0; i < word.length; i++){
 			blanks.push("_");
 		}
-		document.getElementById("current-word").innerHTML = blanks;
-
+		// document.getElementById("current-word").innerHTML = blanks;
+		//document.getElementById("wins").innerHTML = wins;
 	// For debugging.
 	// console.log(gameWords);
 	// console.log(blanks);
