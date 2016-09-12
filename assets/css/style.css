@@ -1,3 +1,19 @@
-p{
+
+
+h1 h2 {
 	font-size: 24px;
+}
+
+p{
+	font-size: 18px;
+}
+
+body{
+	background-image: url("http://cdn.pcwallart.com/images/pigs-wallpaper-2.jpg");
+}
+
+.container{
+	height: 100%;
+	width: 20%;
+	background-color: white;
 }
