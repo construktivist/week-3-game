@@ -5,26 +5,11 @@ var guessedLetters = [];
 var word;
 var guesses; 
 
-
+//Call to initialize the game.
 initialize();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Calls key verification when a key is pressed.
+document.onkeyup=verifyKey;
 
 
 
@@ -54,6 +39,29 @@ function initialize(){
 	var guesses = 15;
 	console.log(guesses)
 }
+
+
+
+
+
+
+//This function checks if the key pressed is a letter or number.
+function verifyKey(){
+
+	//Converts key pressed to lower case.
+	var key = event.key.toLowerCase();
+	console.log(key);
+
+	//Calls checkGuess function if key is a letter.
+	if(/[a-z]/.test(key)){
+		checkGuess(key);
+	}
+
+	//Displays alert if key is a number. 
+	else{
+		alert("Incorrect input. You can only guess letters.");
+	}
+};
 
 //var inp = String.fromCharCode(event.keyCode);
 // if (/[a-zA-Z0-9-_ ]/.test(inp))
